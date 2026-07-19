@@ -3,43 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Página</title>
+	<title>Thiago Ferreira | Cientista de Dados</title>
+	<meta name="description" content="Thiago Ferreira — Cientista de Dados. Precificação dinâmica, machine learning em produção e inferência causal. Matemático pelo ICMC-USP, MBA em Data Science pela ESALQ-USP.">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Thiago Ferreira | Cientista de Dados">
+	<meta property="og:description" content="Precificação dinâmica, machine learning em produção e inferência causal. Conheça meus projetos e currículo.">
+	<meta property="og:image" content="https://curriculo-rosy-kappa.vercel.app/assets/perfil.jpg">
+	<meta property="og:url" content="https://curriculo-rosy-kappa.vercel.app/">
+	<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="./styles/base.css">
 	<link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 <body>
 	<header class="cabecalho">
-		<nav class="cabecalho-caixabotoes">
-			<a class="cabecalho-caixabotoes-botao" href="index.html">Home</a>
-			<a class="cabecalho-caixabotoes-botao" href="about.html">Sobre mim</a>
-			<a class="cabecalho-caixabotoes-botao" href="curriculo.html">Currículo</a>
-		</nav>
+		<div class="cabecalho-conteudo">
+			<a class="cabecalho-marca" href="index.html">Thiago<span>.</span>Ferreira</a>
+			<nav class="cabecalho-caixabotoes">
+				<a class="cabecalho-caixabotoes-botao ativo" href="index.html">Home</a>
+				<a class="cabecalho-caixabotoes-botao" href="about.html">Sobre mim</a>
+				<a class="cabecalho-caixabotoes-botao" href="projetos.html">Projetos</a>
+				<a class="cabecalho-caixabotoes-botao" href="curriculo.html">Currículo</a>
+			</nav>
+		</div>
 	</header>
 	<main class="container">
-		<section class="textos">
-			<h1 class="textos-titulo">
-				<br>
-				Olá, bem-vinda(o) ao meu perfil profissional 
-			</h1>
-			<p class="textos-descricao">
-				Sou <strong class="textos-descricao-nome">Thiago Ferreira</strong>,
-				Matemático por formação e Cientista de dados por paixão.<br>
-				Carrego em mim desejo constante de resolver problemas e aprendender habilidades novas.<br>
-				Aqui você pode conhecer um pouco mais sobre quem sou, minhas habilidades e um
-				breve portfólio com alguns projetos pessoais.
-			</p>
-			<div class="textos-caixabotoes">
-				<h2 class="textos-caixabotoes-titulodosbotoes">Acesse minhas redes:</h2>
-				<a class="textos-caixabotoes-botao" href="https://www.linkedin.com/in/thiago-ferreira-63987b1b5/">
-					<p>Linkedin</p>
-				</a>
-				<a class="textos-caixabotoes-botao" href="https://github.com/tf-ferreira">
-					<p>GitHub</p>
-				</a>
+		<section class="hero">
+			<div class="hero-textos">
+				<p class="hero-saudacao">Olá, eu sou</p>
+				<h1 class="hero-titulo">Thiago Ferreira<br><span>Cientista de Dados</span></h1>
+				<p class="hero-descricao">
+					Especialista em <strong>precificação dinâmica</strong>, <strong>machine learning em produção</strong>
+					e <strong>inferência causal</strong>. Matemático pelo ICMC-USP, transformo problemas de negócio
+					em sistemas de decisão: modelos que chegam à produção, são monitorados e explicados
+					com rigor estatístico.
+				</p>
+				<p class="hero-atual">
+					<span class="selo">Atualmente</span>
+					Cientista de Dados na Volix — sistemas de precificação dinâmica e soluções com agentes de IA
+				</p>
+				<div class="hero-botoes">
+					<a class="botao botao--primario" href="projetos.html">Ver projetos</a>
+					<a class="botao" href="./assets/Thiago_Ferreira_CV.pdf" download>Baixar CV (PDF)</a>
+				</div>
+				<div class="hero-redes">
+					<a href="https://www.linkedin.com/in/thiago-ferreira-63987b1b5/" target="_blank" rel="noopener">LinkedIn</a>
+					<span aria-hidden="true">·</span>
+					<a href="https://github.com/tf-ferreira" target="_blank" rel="noopener">GitHub</a>
+				</div>
 			</div>
+			<img class="hero-foto" src="./assets/perfil.jpg" alt="Foto de Thiago Ferreira" width="640" height="789">
+		</section>
+		<section class="provas" aria-label="Formação e especialidades">
+			<article class="provas-item">
+				<h2>Matemática Aplicada</h2>
+				<p>Bacharelado pelo ICMC-USP, com iniciação científica em análise topológica de dados</p>
+			</article>
+			<article class="provas-item">
+				<h2>MBA Data Science &amp; Analytics</h2>
+				<p>ESALQ-USP, com TCC em precificação dinâmica e identificação causal</p>
+			</article>
+			<article class="provas-item">
+				<h2>ML em produção</h2>
+				<p>Monitoramento com PSI, detecção de data drift e políticas de restrição de modelos</p>
+			</article>
+			<article class="provas-item">
+				<h2>IA generativa e agentes</h2>
+				<p>Automação de análises e soluções baseadas em agentes com LLMs</p>
+			</article>
 		</section>
 	</main>
 	<footer class="rodape">
-		<p class="rodape-texto">Desenvolvido por Thiago Ferreira</p>
+		<div class="rodape-conteudo">
+			<p class="rodape-texto">© Thiago Ferreira — Cientista de Dados</p>
+			<nav class="rodape-links">
+				<a href="https://www.linkedin.com/in/thiago-ferreira-63987b1b5/" target="_blank" rel="noopener">LinkedIn</a>
+				<a href="https://github.com/tf-ferreira" target="_blank" rel="noopener">GitHub</a>
+				<a href="mailto:thiagoferreira9594@gmail.com">E-mail</a>
+			</nav>
+		</div>
 	</footer>
 </body>
 </html>

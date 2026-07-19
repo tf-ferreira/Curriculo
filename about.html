@@ -3,53 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sobre mim</title>
+	<title>Sobre mim | Thiago Ferreira</title>
+	<meta name="description" content="Conheça Thiago Ferreira: Cientista de Dados com formação em Matemática Aplicada pelo ICMC-USP, MBA em Data Science pela ESALQ-USP e experiência em precificação dinâmica e IA.">
+	<meta property="og:type" content="profile">
+	<meta property="og:title" content="Sobre mim | Thiago Ferreira">
+	<meta property="og:description" content="Cientista de Dados — Matemática Aplicada (ICMC-USP), MBA Data Science (ESALQ-USP), precificação dinâmica e IA.">
+	<meta property="og:image" content="https://curriculo-rosy-kappa.vercel.app/assets/perfil.jpg">
+	<meta property="og:url" content="https://curriculo-rosy-kappa.vercel.app/about.html">
+	<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="./styles/base.css">
 	<link rel="stylesheet" type="text/css" href="./styles/style-about.css">
 </head>
 <body>
 	<header class="cabecalho">
-		<nav class="cabecalho-caixabotoes">
-			<a class="cabecalho-caixabotoes-botao" href="index.html">Home</a>
-			<a class="cabecalho-caixabotoes-botao" href="about.html">Sobre mim</a>
-			<a class="cabecalho-caixabotoes-botao" href="curriculo.html">Currículo</a>
-		</nav>
+		<div class="cabecalho-conteudo">
+			<a class="cabecalho-marca" href="index.html">Thiago<span>.</span>Ferreira</a>
+			<nav class="cabecalho-caixabotoes">
+				<a class="cabecalho-caixabotoes-botao" href="index.html">Home</a>
+				<a class="cabecalho-caixabotoes-botao ativo" href="about.html">Sobre mim</a>
+				<a class="cabecalho-caixabotoes-botao" href="projetos.html">Projetos</a>
+				<a class="cabecalho-caixabotoes-botao" href="curriculo.html">Currículo</a>
+			</nav>
+		</div>
 	</header>
 	<main class="container">
 		<section class="textos">
-			<h1 class="textos-titulo">
-				<br>
-				Sobre mim
-			</h1>
+			<h1 class="titulo-secao">Sobre mim<span>.</span></h1>
 			<div class="textos-paragrafos">
-				<p class="textos-paragrafos-p1">
-					Sou Thiago Ferreira, Cientista de Dados e Especialista em Inteligência Artificial com
+				<p>
+					Sou Thiago Ferreira, <strong>Cientista de Dados e Especialista em Inteligência Artificial</strong> com
 					sólida formação matemática pelo ICMC-USP, onde me graduei em Matemática Aplicada
 					e Computação Científica.
 				</p>
-				<p class="textos-paragrafos-p2">
-					Tenho experiência aplicada em modelagem preditiva, sistemas de precificação dinâmica,
-					uso intensivo de IA generativa e implantação de soluções em produção. Desenvolvo
-					pipelines completos de machine learning com ênfase em rigor metodológico, validação
+				<p>
+					Tenho experiência aplicada em <strong>modelagem preditiva</strong>, <strong>sistemas de precificação
+					dinâmica</strong>, uso intensivo de <strong>IA generativa</strong> e implantação de soluções em produção.
+					Desenvolvo pipelines completos de machine learning com ênfase em rigor metodológico, validação
 					robusta e comunicação clara de resultados para stakeholders técnicos e executivos.
 				</p>
-				<p class="textos-paragrafos-p3">
-					Atualmente atuo como Cientista de Dados na Volix, startup de consultoria em precificação,
+				<p>
+					Atualmente atuo como Cientista de Dados na <strong>Volix</strong>, startup de consultoria em precificação,
 					onde lidero o desenvolvimento de sistemas de precificação dinâmica e a exploração de
 					soluções baseadas em agentes de IA. Anteriormente, atuei como Cientista de Dados Junior
-					na Incentivar, startup focada em campanhas de incentivo de vendas.
+					na <strong>Incentivar</strong>, startup focada em campanhas de incentivo de vendas.
 				</p>
-				<p class="textos-paragrafos-p4">
-					Paralelamente ao trabalho, estou concluindo um MBA em Data Science e Analytics pela
-					ESALQ-USP, com TCC focado em precificação dinâmica com machine learning e identificação
+				<p>
+					Paralelamente ao trabalho, estou concluindo um <strong>MBA em Data Science e Analytics pela
+					ESALQ-USP</strong>, com TCC focado em precificação dinâmica com machine learning e identificação
 					causal. Estou comprometido com a obtenção das certificações CDMP (DAMA) e CIMP
 					(eLearningCurve) como próxima etapa de desenvolvimento profissional.
 				</p>
 			</div>
+			<div class="textos-botoes">
+				<a class="botao botao--primario" href="projetos.html">Conheça meus projetos</a>
+				<a class="botao" href="curriculo.html">Ver currículo</a>
+			</div>
 		</section>
-		<img class="foto" src="./assets/imagem.png" alt="Foto de Thiago Ferreira">
+		<figure class="foto-moldura">
+			<img class="foto" src="./assets/perfil.jpg" alt="Foto de Thiago Ferreira" width="640" height="789">
+		</figure>
 	</main>
 	<footer class="rodape">
-		<p class="rodape-texto">Desenvolvido por Thiago Ferreira</p>
+		<div class="rodape-conteudo">
+			<p class="rodape-texto">© Thiago Ferreira — Cientista de Dados</p>
+			<nav class="rodape-links">
+				<a href="https://www.linkedin.com/in/thiago-ferreira-63987b1b5/" target="_blank" rel="noopener">LinkedIn</a>
+				<a href="https://github.com/tf-ferreira" target="_blank" rel="noopener">GitHub</a>
+				<a href="mailto:thiagoferreira9594@gmail.com">E-mail</a>
+			</nav>
+		</div>
 	</footer>
 </body>
 </html>

@@ -1,0 +1,256 @@
+/* ==========================================================================
+   base.css — identidade visual compartilhada por todas as páginas
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root{
+	--cor-fundo: #2C3639;
+	--cor-superficie: #33403F;
+	--cor-fonte: #DCD7C9;
+	--cor-fonte-suave: #B8B2A4;
+	--cor-detalhe: #A27B5C;
+	--cor-detalhe-claro: #C49A77;
+	--cor-hover: #3F4E4F;
+	--cor-borda: rgba(220, 215, 201, 0.14);
+
+	--fonte-titulo: 'Krona One', sans-serif;
+	--fonte-texto: 'Montserrat', sans-serif;
+
+	--size-xl: 2.25rem;
+	--size-lg: 1.5rem;
+	--size-md: 1.125rem;
+	--size-sm: 1rem;
+	--size-xs: 0.875rem;
+
+	--espaco-1: 0.5rem;
+	--espaco-2: 1rem;
+	--espaco-3: 1.5rem;
+	--espaco-4: 2.5rem;
+	--espaco-5: 4rem;
+
+	--raio: 14px;
+	--transicao: 0.25s ease;
+	--largura-conteudo: 1080px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--cor-fundo);
+	color: var(--cor-fonte);
+	font-family: var(--fonte-texto);
+	line-height: 1.6;
+}
+
+main{
+	flex: 1;
+	width: 100%;
+	max-width: var(--largura-conteudo);
+	margin: 0 auto;
+	padding: var(--espaco-4) var(--espaco-3);
+}
+
+::selection{
+	background-color: var(--cor-detalhe);
+	color: var(--cor-fundo);
+}
+
+/* --------------------------------------------------------------------------
+   Cabeçalho / navegação
+   -------------------------------------------------------------------------- */
+
+.cabecalho{
+	width: 100%;
+	border-bottom: 1px solid var(--cor-borda);
+	position: sticky;
+	top: 0;
+	background-color: rgba(44, 54, 57, 0.92);
+	backdrop-filter: blur(6px);
+	z-index: 10;
+}
+
+.cabecalho-conteudo{
+	max-width: var(--largura-conteudo);
+	margin: 0 auto;
+	padding: 0 var(--espaco-3);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--espaco-2);
+	min-height: 72px;
+	flex-wrap: wrap;
+}
+
+.cabecalho-marca{
+	font-family: var(--fonte-titulo);
+	font-size: var(--size-sm);
+	color: var(--cor-fonte);
+	text-decoration: none;
+	letter-spacing: 0.02em;
+}
+
+.cabecalho-marca span{
+	color: var(--cor-detalhe);
+}
+
+.cabecalho-caixabotoes{
+	display: flex;
+	align-items: center;
+	gap: var(--espaco-1);
+	flex-wrap: wrap;
+}
+
+.cabecalho-caixabotoes-botao{
+	font-family: var(--fonte-texto);
+	font-weight: 600;
+	font-size: var(--size-xs);
+	color: var(--cor-fonte-suave);
+	text-decoration: none;
+	padding: 0.5rem 0.9rem;
+	border-radius: 8px;
+	transition: color var(--transicao), background-color var(--transicao);
+}
+
+.cabecalho-caixabotoes-botao:hover{
+	color: var(--cor-fonte);
+	background-color: var(--cor-hover);
+}
+
+.cabecalho-caixabotoes-botao.ativo{
+	color: var(--cor-detalhe-claro);
+	background-color: var(--cor-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Componentes compartilhados
+   -------------------------------------------------------------------------- */
+
+.titulo-secao{
+	font-family: var(--fonte-titulo);
+	font-size: var(--size-lg);
+	line-height: 1.35;
+	margin-bottom: var(--espaco-3);
+}
+
+.titulo-secao span{
+	color: var(--cor-detalhe-claro);
+}
+
+.botao{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--fonte-texto);
+	font-weight: 600;
+	font-size: var(--size-sm);
+	text-decoration: none;
+	padding: 0.8rem 1.6rem;
+	border-radius: var(--raio);
+	border: 2px solid var(--cor-detalhe);
+	color: var(--cor-detalhe-claro);
+	background-color: transparent;
+	transition: background-color var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.botao:hover{
+	background-color: var(--cor-hover);
+	transform: translateY(-2px);
+}
+
+.botao--primario{
+	background-color: var(--cor-detalhe);
+	color: var(--cor-fundo);
+}
+
+.botao--primario:hover{
+	background-color: var(--cor-detalhe-claro);
+	color: var(--cor-fundo);
+}
+
+.selo{
+	display: inline-block;
+	font-size: var(--size-xs);
+	font-weight: 600;
+	color: var(--cor-detalhe-claro);
+	border: 1px solid var(--cor-detalhe);
+	border-radius: 999px;
+	padding: 0.15rem 0.75rem;
+	white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé
+   -------------------------------------------------------------------------- */
+
+.rodape{
+	border-top: 1px solid var(--cor-borda);
+	background-color: var(--cor-superficie);
+	color: var(--cor-fonte-suave);
+	margin-top: var(--espaco-4);
+}
+
+.rodape-conteudo{
+	max-width: var(--largura-conteudo);
+	margin: 0 auto;
+	padding: var(--espaco-3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--espaco-2);
+	flex-wrap: wrap;
+	font-size: var(--size-xs);
+}
+
+.rodape-links{
+	display: flex;
+	gap: var(--espaco-2);
+}
+
+.rodape-links a{
+	color: var(--cor-detalhe-claro);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.rodape-links a:hover{
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade da estrutura
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 700px){
+	:root{
+		--size-xl: 1.6rem;
+		--size-lg: 1.25rem;
+	}
+
+	.cabecalho-conteudo{
+		justify-content: center;
+		padding: var(--espaco-1) var(--espaco-2);
+	}
+
+	main{
+		padding: var(--espaco-3) var(--espaco-2);
+	}
+
+	.rodape-conteudo{
+		justify-content: center;
+		text-align: center;
+	}
+}

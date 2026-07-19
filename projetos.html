@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projetos | Thiago Ferreira</title>
+	<meta name="description" content="Projetos de ciência de dados de Thiago Ferreira: machine learning em produção, deep learning, inferência estatística e pesquisa em análise topológica de dados.">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Projetos | Thiago Ferreira">
+	<meta property="og:description" content="Machine learning em produção, deep learning, inferência estatística e pesquisa acadêmica — com código, demos e resultados.">
+	<meta property="og:image" content="https://curriculo-rosy-kappa.vercel.app/assets/perfil.jpg">
+	<meta property="og:url" content="https://curriculo-rosy-kappa.vercel.app/projetos.html">
+	<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="./styles/base.css">
+	<link rel="stylesheet" type="text/css" href="./styles/style-projetos.css">
+</head>
+<body>
+	<header class="cabecalho">
+		<div class="cabecalho-conteudo">
+			<a class="cabecalho-marca" href="index.html">Thiago<span>.</span>Ferreira</a>
+			<nav class="cabecalho-caixabotoes">
+				<a class="cabecalho-caixabotoes-botao" href="index.html">Home</a>
+				<a class="cabecalho-caixabotoes-botao" href="about.html">Sobre mim</a>
+				<a class="cabecalho-caixabotoes-botao ativo" href="projetos.html">Projetos</a>
+				<a class="cabecalho-caixabotoes-botao" href="curriculo.html">Currículo</a>
+			</nav>
+		</div>
+	</header>
+	<main class="container">
+		<h1 class="titulo-secao">Projetos<span>.</span></h1>
+		<p class="intro">
+			Cada projeto segue a mesma lógica: <strong>problema real → método rigoroso → resultado medido</strong>.
+			Código aberto, reprodutível e documentado.
+		</p>
+
+		<h2 class="grupo-titulo">Em destaque</h2>
+		<section class="cards">
+			<article class="card card--destaque">
+				<div class="card-topo">
+					<h3 class="card-titulo">Previsão de atraso de entrega no e-commerce (Olist)</h3>
+					<span class="selo">ML em produção</span>
+				</div>
+				<p class="card-problema">
+					Prever, no momento da compra, a probabilidade de um pedido atrasar — e transformar
+					essa probabilidade em uma política operacional de notificação proativa. 96 mil pedidos reais (2016–2018).
+				</p>
+				<p class="card-metodo">
+					Features anti-vazamento com contrato executável em testes (pytest), split temporal com teste
+					tocado uma única vez, métricas em contagens de negócio e app interativo para simular cenários.
+				</p>
+				<ul class="card-resultados">
+					<li><strong>2,2×</strong> a precisão do acaso nos alertas</li>
+					<li><strong>36%</strong> dos atrasos capturados notificando só 16% dos pedidos</li>
+					<li>Robustez validada em 6 meses com choques reais (greve dos caminhoneiros)</li>
+				</ul>
+				<p class="card-tags">Python · scikit-learn · LightGBM · pytest · Streamlit</p>
+				<div class="card-links">
+					<a class="botao botao--primario" href="https://github.com/tf-ferreira/olist-delivery-delay-prediction" target="_blank" rel="noopener">Repositório</a>
+					<a class="botao" href="https://olist-delivery-delay-prediction.streamlit.app/" target="_blank" rel="noopener">App interativo</a>
+				</div>
+			</article>
+			<article class="card card--destaque">
+				<div class="card-topo">
+					<h3 class="card-titulo">Classificação hierárquica de imagens de produtos</h3>
+					<span class="selo">Deep learning</span>
+				</div>
+				<p class="card-problema">
+					Categorizar produtos de e-commerce em uma taxonomia de 3 níveis a partir da imagem —
+					problema central em cadastro de catálogo, matching e precificação.
+				</p>
+				<p class="card-metodo">
+					Experimento controlado entre duas arquiteturas (flat + taxonomia vs. multi-head multi-task)
+					com ConvNeXt-Tiny (fastai + timm): mesma seed, mesmo split, diff de config como definição do experimento.
+				</p>
+				<ul class="card-resultados">
+					<li><strong>90,1%</strong> de acurácia no nível fino (143 classes)</li>
+					<li><strong>100%</strong> de consistência hierárquica por construção</li>
+					<li>Modelo publicado no Hugging Face + demo com CI</li>
+				</ul>
+				<p class="card-tags">fastai · timm · PyTorch · GitHub Actions · Hugging Face</p>
+				<div class="card-links">
+					<a class="botao botao--primario" href="https://github.com/tf-ferreira/hierarchical-product-classifier" target="_blank" rel="noopener">Repositório</a>
+					<a class="botao" href="https://hierclf-demo.streamlit.app" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</article>
+		</section>
+
+		<h2 class="grupo-titulo">Estatística e fundamentos</h2>
+		<section class="cards">
+			<article class="card">
+				<div class="card-topo">
+					<h3 class="card-titulo">House Prices — OLS com diagnósticos estatísticos</h3>
+					<span class="selo">Inferência</span>
+				</div>
+				<p class="card-problema">
+					Modelagem explicativa de preços de imóveis com foco em interpretação econômica
+					e verificação formal das premissas — o oposto proposital da caixa-preta.
+				</p>
+				<ul class="card-resultados">
+					<li>R² ajustado de <strong>0,767</strong> com todos os coeficientes a p &lt; 0,001</li>
+					<li>Diagnósticos formais: Breusch–Pagan, VIF e QQ-plot</li>
+				</ul>
+				<p class="card-tags">statsmodels · pandas · scipy</p>
+				<div class="card-links">
+					<a class="botao" href="https://github.com/tf-ferreira/ols-house-prices" target="_blank" rel="noopener">Repositório</a>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-topo">
+					<h3 class="card-titulo">Titanic — fundamentos de classificação</h3>
+					<span class="selo">Fundamentos</span>
+				</div>
+				<p class="card-problema">
+					Estudo iterativo do desafio clássico do Kaggle: cada decisão de pré-processamento
+					e feature engineering medida contra o estágio anterior, do baseline ao tuning.
+				</p>
+				<ul class="card-resultados">
+					<li>Score de <strong>≈ 0,80</strong> no leaderboard público</li>
+					<li>5 modelos comparados com GridSearchCV</li>
+				</ul>
+				<p class="card-tags">scikit-learn · pandas · ydata-profiling</p>
+				<div class="card-links">
+					<a class="botao" href="https://github.com/tf-ferreira/titanic-classification" target="_blank" rel="noopener">Repositório</a>
+				</div>
+			</article>
+		</section>
+
+		<h2 class="grupo-titulo">Pesquisa</h2>
+		<section class="cards">
+			<article class="card">
+				<div class="card-topo">
+					<h3 class="card-titulo">Análise topológica de dados — câncer de mama (METABRIC)</h3>
+					<span class="selo selo--status">Em modernização</span>
+				</div>
+				<p class="card-problema">
+					Iniciação científica (ICMC-USP): homologia persistente, curvas de Betti e distâncias de
+					Wasserstein para caracterizar e agrupar perfis clínicos do estudo METABRIC
+					(<em>Nature</em> 2012 &amp; <em>Nat. Commun.</em> 2016).
+				</p>
+				<p class="card-metodo">
+					O código original da pesquisa está passando por reestruturação completa —
+					organização, documentação e reprodutibilidade — antes da publicação em formato de projeto.
+				</p>
+				<p class="card-tags">GUDHI · TDA · Python</p>
+				<div class="card-links">
+					<a class="botao" href="https://github.com/tf-ferreira/TDA-metabric" target="_blank" rel="noopener">Repositório</a>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-topo">
+					<h3 class="card-titulo">Precificação dinâmica com ML e identificação causal</h3>
+					<span class="selo selo--status">Em desenvolvimento</span>
+				</div>
+				<p class="card-problema">
+					TCC do MBA em Data Science e Analytics (ESALQ-USP): sistema de precificação dinâmica com
+					modelos de machine learning, <strong>identificação causal via variáveis instrumentais</strong>
+					e monitoramento de distribuição em produção (PSI).
+				</p>
+				<p class="card-metodo">
+					A pesquisa está em fase final; uma versão pública do repositório será disponibilizada
+					após a conclusão e a devida anonimização dos dados.
+				</p>
+				<p class="card-tags">Econometria · variáveis instrumentais · PSI · Python</p>
+			</article>
+		</section>
+	</main>
+	<footer class="rodape">
+		<div class="rodape-conteudo">
+			<p class="rodape-texto">© Thiago Ferreira — Cientista de Dados</p>
+			<nav class="rodape-links">
+				<a href="https://www.linkedin.com/in/thiago-ferreira-63987b1b5/" target="_blank" rel="noopener">LinkedIn</a>
+				<a href="https://github.com/tf-ferreira" target="_blank" rel="noopener">GitHub</a>
+				<a href="mailto:thiagoferreira9594@gmail.com">E-mail</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>
